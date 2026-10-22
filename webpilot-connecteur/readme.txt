@@ -2,7 +2,7 @@
 Contributors: Localisy
 Requires at least: 5.8
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 
 Permet à webpilot de lire l'état technique du site : versions de WordPress et PHP,
 extensions et thèmes avec leurs mises à jour, date de la dernière sauvegarde. Lecture seule.
@@ -18,6 +18,9 @@ L'extension se met à jour automatiquement depuis les versions publiées par Loc
 dont la signature ne correspond pas est refusé.
 
 == Changelog ==
+= 1.2.0 =
+* UpdraftPlus : nombre de sauvegardes, contenu, planification, conservation et stockage distant.
+
 = 1.1.0 =
 * Mises à jour automatiques et signées depuis GitHub.
 
