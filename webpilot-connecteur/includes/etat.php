@@ -67,6 +67,7 @@ function webpilot_etat() {
         'extensions' => $extensions,
         'themes' => $themes,
         'sauvegarde' => webpilot_sauvegarde(),
+        'connexionRapide' => webpilot_etat_connexion(),
         'verifieLe' => gmdate('c'),
     );
 }

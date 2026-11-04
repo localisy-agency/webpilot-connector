@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: WebPilot Connector
- * Description: Permet à webpilot de lire l'état technique du site (versions de WordPress et PHP, extensions, thèmes, mises à jour, dernière sauvegarde). Lecture seule.
- * Version: 1.2.0
+ * Description: Permet à WebPilot de lire l'état technique du site (versions de WordPress et PHP, extensions, thèmes, mises à jour, dernière sauvegarde), et, si vous l'activez, d'ouvrir l'admin en un clic depuis WebPilot.
+ * Version: 1.3.0
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Localisy
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('WEBPILOT_CONNECTEUR_VERSION', '1.2.0');
+define('WEBPILOT_CONNECTEUR_VERSION', '1.3.0');
 define('WEBPILOT_CONNECTEUR_FICHIER', __FILE__);
 define('WEBPILOT_OPTION_JETON', 'webpilot_connecteur_jeton');
 define('WEBPILOT_OPTION_DERNIERE', 'webpilot_connecteur_derniere_requete');
@@ -23,6 +23,7 @@ require_once __DIR__ . '/includes/signature.php';
 require_once __DIR__ . '/includes/sauvegarde.php';
 require_once __DIR__ . '/includes/outils.php';
 require_once __DIR__ . '/includes/etat.php';
+require_once __DIR__ . '/includes/connexion.php';
 require_once __DIR__ . '/includes/reglages.php';
 require_once __DIR__ . '/includes/mise-a-jour.php';
 
