@@ -2,10 +2,10 @@
 Contributors: Localisy
 Requires at least: 5.8
 Requires PHP: 7.4
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 
 Permet à WebPilot de lire l'état technique du site : versions de WordPress et PHP,
-extensions et thèmes avec leurs mises à jour, date de la dernière sauvegarde. Lecture seule.
+extensions et thèmes avec leurs mises à jour, date de la dernière sauvegarde, journal d'erreurs PHP et 404. Lecture seule.
 
 == Installation ==
 1. Extensions → Ajouter → Téléverser l'extension : choisir webpilot-connecteur.zip.
@@ -18,6 +18,10 @@ L'extension se met à jour automatiquement depuis les versions publiées par Loc
 dont la signature ne correspond pas est refusé.
 
 == Changelog ==
+= 1.4.0 =
+* Journal PHP (lecture seule) : réglages de débogage et erreurs des 7 derniers jours.
+* Erreurs 404 des 7 derniers jours enregistrées par Redirection ou Rank Math.
+
 = 1.3.0 =
 * Connexion rapide (facultative) : WebPilot ouvre l'admin en un clic avec un lien signé, à usage unique, pour le compte choisi dans les réglages.
 

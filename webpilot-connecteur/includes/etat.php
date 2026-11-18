@@ -31,6 +31,15 @@ function webpilot_maj_wordpress() {
     return null;
 }
 
+// Une lecture de journal qui échoue ne doit pas priver webpilot du reste de l'état.
+function webpilot_sans_echec($fonction) {
+    try {
+        return $fonction();
+    } catch (\Throwable $e) {
+        return null;
+    }
+}
+
 function webpilot_etat() {
     require_once ABSPATH . 'wp-admin/includes/plugin.php';
     webpilot_rafraichir_mises_a_jour_si_ancien();
@@ -68,6 +77,8 @@ function webpilot_etat() {
         'themes' => $themes,
         'sauvegarde' => webpilot_sauvegarde(),
         'connexionRapide' => webpilot_etat_connexion(),
+        'journalPhp' => webpilot_sans_echec('webpilot_journal_php'),
+        'journal404' => webpilot_sans_echec('webpilot_journal_404'),
         'verifieLe' => gmdate('c'),
     );
 }
